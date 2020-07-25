@@ -1,0 +1,100 @@
+/* --- VARIABLES ---  */
+:root {
+  /* COLORES */
+  --clr-naranja: #ff5000;
+  --clr-purple: #7500ff;
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+  --clr-blue: #0b2efb;
+  --clr-green: #1bb366;
+  --clr-dark-grey: #17181b;
+
+  /* TYPOS */
+  --typo-button: bold 14px "Open Sans";
+  --typo-banner-title: bold 130px "Open Sans";
+}
+
+/* --- COMPONENTES ---  */
+
+/* BOTONES */
+button, button:focus{
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+button.btn {
+  padding: 8px 25px;
+  text-transform: uppercase;
+  background-color: var(--clr-white);
+  font: var(--typo-button);
+  transition: all ease-in 300ms;
+}
+
+.btn.orange {
+  background-color: var(--clr-naranja);
+  color: var(--clr-black);
+}
+
+.btn.orange:hover {
+  color: var(--clr-white);
+}
+
+/* LAYOUTS */
+.two-colum {
+  display: flex;
+}
+
+.two-colum > * {
+  width: 50%;
+}
+
+.tes{
+  background-color: gray;
+  height: 500px;
+}
+
+.lll {
+  background-color: lightgray;
+
+}
+
+
+/* ESTILOS GLOBALES */
+body {
+  /* inport de fonts */
+  font-family: "Open Sans", sans-serif;
+  font-family: "PT Serif", serif;
+  background-color: var(--clr-black);
+}
+
+main {
+  padding-top: 70px;
+}
+
+/* SECTIONS DEL UI */
+nav#main-nav {
+  height: 70px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--clr-black);
+}
+
+nav#main-nav .nav-content {
+  padding: 0 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav#side-nav {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  width: 220px;
+  background-color: var(--clr-dark-grey);
+}
