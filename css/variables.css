@@ -1,0 +1,30 @@
+/* --- VARIABLES ---  */
+:root {
+  /* COLORES */
+  --clr-naranja: #ff5000;
+  --clr-purple: #7500ff;
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+  --clr-blue: #0b2efb;
+  --clr-green: #1bb366;
+  --clr-dark-grey: #17181b;
+  --clr-shadow-modal: rgba(0,0,0,0.7);
+
+  /* TYPOS */
+  --typo-button: bold 14px "Open Sans";
+  --typo-banner-title: bold 130px "Open Sans";
+  --typo-global: 300 14px "Open Sans";
+  --typo-main-title: bold 64px "PT Serif";
+  --typo-footer: 300 14px "Open Sans";
+  --typo-input: italic 300 14px "Open Sans";
+
+  /* ICONS */
+  --icon-regular: 18px;
+
+  /* MARGIN */
+  --margin-min: 10px;
+  --margin-small: 15px;
+  --margin-md-smal: 30px;
+  --margin-md: 60px;
+  --margin-big: 120px;
+}

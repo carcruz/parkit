@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Parkit - App home</title>
+    <title>Parkit - Verificacion</title>
     <!-- Link de FontAwesome -->
     <script
       src="https://kit.fontawesome.com/d363d1b466.js"
@@ -13,16 +13,36 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=PT+Serif:wght@700&display=swap"
       rel="stylesheet"
     />
-
     <!-- Referencia a archivos CSS -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/layout.css" />
+    
     <!--  Referencia a archivos CSS -->
+    <link rel="stylesheet" href="css/verificacion.css" />
   </head>
   <body>
-    <nav id="main-nav"></nav>
-    <nav id="side-nav"></nav>
+    <!-- Navbar superior -->
+    <nav id="main-nav">
+      <div class="nav-content">
+        <img class="brand" src="./img/full-logo/purple.png" alt="logo" />
+      </div>
+    </nav>
+    <!-- Contenedor general -->
+    <main>
+      <h2>Activación <br> de cuenta</h2>
+      <p>Digite los 6 dígitos que se le enviaron a su correo electrónico.</p>
+      <div class="input-container">
+        <input class="input-text">
+
+        <select class="input-select" name="cars">
+          <option value="" disabled selected hidden>Tipo de identificación</option>
+          <option value="cedula">option 1</option>
+          <option value="cedula">option 2</option>
+        </select>
+      </div>
+      <button class="btn orange">Enviar</button>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -41,6 +61,5 @@
       </div>
     </footer>
 
-    <script src="./js/modal-controller.js"></script>
   </body>
 </html>

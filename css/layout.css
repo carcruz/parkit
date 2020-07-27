@@ -1,23 +1,8 @@
-/* --- VARIABLES ---  */
-:root {
-  /* COLORES */
-  --clr-naranja: #ff5000;
-  --clr-purple: #7500ff;
-  --clr-black: #000000;
-  --clr-white: #ffffff;
-  --clr-blue: #0b2efb;
-  --clr-green: #1bb366;
-  --clr-dark-grey: #17181b;
-
-  /* TYPOS */
-  --typo-button: bold 14px "Open Sans";
-  --typo-banner-title: bold 130px "Open Sans";
-}
-
 /* --- COMPONENTES ---  */
 
 /* BOTONES */
-button, button:focus{
+button,
+button:focus {
   cursor: pointer;
   outline: none;
   border: none;
@@ -28,7 +13,17 @@ button.btn {
   text-transform: uppercase;
   background-color: var(--clr-white);
   font: var(--typo-button);
-  transition: all ease-in 300ms;
+  transition: background-color ease-in 300ms;
+}
+
+.btn.purple {
+  background-color: var(--clr-purple);
+  color: var(--clr-white);
+}
+
+.btn.green {
+  background-color: var(--clr-green);
+  color: var(--clr-black);
 }
 
 .btn.orange {
@@ -37,7 +32,22 @@ button.btn {
 }
 
 .btn.orange:hover {
+  background-color: var(--clr-green);
+}
+
+/* INPUTS */
+.input-text, .input-select {
+  border: none;
+  background-color: var(--clr-dark-grey);
+  padding: var(--margin-min) var(--margin-small);
+  font: var(--typo-input);
   color: var(--clr-white);
+  width: 100%;
+  margin-bottom: var(--margin-small);
+  box-sizing: border-box;
+}
+.input-text:focus, .input-select:focus {
+  outline: none;
 }
 
 /* LAYOUTS */
@@ -49,22 +59,10 @@ button.btn {
   width: 50%;
 }
 
-.tes{
-  background-color: gray;
-  height: 500px;
-}
-
-.lll {
-  background-color: lightgray;
-
-}
-
-
 /* ESTILOS GLOBALES */
 body {
   /* inport de fonts */
-  font-family: "Open Sans", sans-serif;
-  font-family: "PT Serif", serif;
+  font: var(--typo-global);
   background-color: var(--clr-black);
 }
 
@@ -73,6 +71,7 @@ main {
 }
 
 /* SECTIONS DEL UI */
+/* Top navbar */
 nav#main-nav {
   height: 70px;
   overflow: hidden;
@@ -90,6 +89,11 @@ nav#main-nav .nav-content {
   justify-content: space-between;
 }
 
+nav#main-nav .nav-content .brand {
+  width: 140px;
+}
+
+/* Side navbar */
 nav#side-nav {
   height: 100%;
   overflow: hidden;
@@ -97,4 +101,109 @@ nav#side-nav {
   left: 0;
   width: 220px;
   background-color: var(--clr-dark-grey);
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: var(--clr-dark-grey);
+  color: var(--clr-white);
+  font: var(--typo-footer);
+}
+
+footer .left {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+footer .left p {
+  margin: 0 var(--margin-min);
+}
+
+footer .left .social {
+  font-size: var(--icon-regular);
+}
+
+footer .left .social > * {
+  margin: 0 var(--margin-min);
+}
+
+footer .ifam-log {
+  width: 90px;
+  margin: 10px 0;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  overflow-x: hidden;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--clr-shadow-modal);
+  transition: opacity 1s ease-in;
+}
+
+.modal.active {
+  opacity: 1;
+  height: 100%;
+  display: block;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: var(--clr-black);
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-small {
+  width: 700px;
+}
+
+.modal-title {
+  font: var(--typo-main-title);
+  color: var(--clr-white);
+  text-align: center;
+  margin-top: var(--margin-md);
+  margin-bottom: var(--margin-md);
+}
+
+/* close button */
+.modal-close {
+  color: var(--clr-green);
+  position: absolute;
+  left: var(--margin-min);
+  top: var(--margin-min);
+  font-size: 28px;
+  transition: color;
+}
+
+.modal-inputs-container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.forget-link {
+  display: block;
+  margin-bottom: var(--margin-small);
+  text-decoration: none;
+  color: var(--clr-green);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: var(--clr-naranja);
+  text-decoration: none;
+  cursor: pointer;
 }

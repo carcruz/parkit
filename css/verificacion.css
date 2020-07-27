@@ -1,0 +1,20 @@
+main {
+  text-align: center;
+  min-height:900px ;
+}
+
+main h2 {
+  font: var(--typo-main-title);
+  color: var(--clr-white);
+  margin-bottom: var(--margin-md);
+}
+
+main p {
+  color: var(--clr-white);
+  margin-bottom: var(--margin-small);
+}
+
+main .input-container {
+  width: 450px;
+  margin: 0 auto;
+}

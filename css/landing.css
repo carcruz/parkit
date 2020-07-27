@@ -1,6 +1,22 @@
 /* LANDING STYLES */
 
 #banner {
-  height: 745px;
+  height: 800px;
   background-color: var(--clr-purple);
+  background-image: url("../img/landing/parkit_banner_full.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.tes {
+  background-color: gray;
+  height: 500px;
+}
+
+.lll {
+  background-color: lightgray;
+}
+
+#btn-ingresar {
+  margin-bottom: 200px;
 }

@@ -10,12 +10,12 @@
     ></script>
     <!-- Referencia del font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=PT+Serif:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=PT+Serif:wght@700&display=swap"
       rel="stylesheet"
     />
     <!-- Referencia a archivos CSS -->
     <link rel="stylesheet" href="css/reset.css" />
-    <!-- <link rel="stylesheet" href="css/general.css" /> -->
+    <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/landing.css" />
     <!--  Referencia a archivos CSS -->
@@ -24,37 +24,82 @@
     <!-- Navbar superior -->
     <nav id="main-nav">
       <div class="nav-content">
-        <img src="./img/parkit-brand.png" alt="logo" />
-        <button type="button" class="btn orange">Ya tengo cuenta</button>
+        <img class="brand" src="./img/full-logo/purple.png" alt="logo" />
+        <button type="button" class="btn purple" id="btn-login">
+          Ya tengo cuenta
+        </button>
       </div>
     </nav>
-    <!-- contenedor general -->
+    <!-- Contenedor general -->
     <main>
       <!-- Banner -->
-      <section id="banner"></section>
+      <section id="banner">
 
-      <section id="promo-1">
-        <div class="two-colum">
-          <div class="tes"></div>
-          <div class="lll"></div>
-        </div>
-
-        <div class="two-colum">
-          <div class="lll"></div>
-          <div class="tes"></div>
-        </div>
-        
       </section>
 
-      <!--  -->
+      <section id="sct-promo-1">
+        <div class="two-colum">
+          <div class="tes">
+            fwefwe
+          </div>
+          <div class="lll">
+            onfw
+          </div>
+        </div>
+      </section>
+
+      <section id="sct-promo-2">
+        <div class="two-colum">
+          <div class="lll"></div>
+          <div class="tes"></div>
+        </div>
+      </section>
     </main>
 
-    <!-- footer -->
+    <!-- Footer -->
     <footer>
-      <p>Copyright &copy; Monte Nevado 2020</p>
+      <div class="left">
+        <img class="ifam-log" src="./img/ifam_logo.png" alt="logo ifam" />
+        <p>www.ifam.go.cr</p>
+        <div class="social">
+          <span class="fab fa-facebook-square"></span>
+          <span class="fab fa-instagram"></span>
+        </div>
+        <p>2250-0000 ext 2010</p>
+        <p>info@parkit.com</p>
+      </div>
+      <div class="rigt">
+        <p>Todos los derechos reservados. 2020 &copy; Parkit</p>
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="./js/controlador.js"></script>
+    <!-- Modal Login -->
+    <div id="modal-login" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content modal-small">
+        <span
+          id="close-modal-login"
+          class="far fa-window-close modal-close"
+        ></span>
+        <h2 class="modal-title">Ingresar</h2>
+        <!-- inputs -->
+        <div class="modal-inputs-container">
+          <input
+            class="input-text"
+            placeholder="Correo electrónico"
+            type="email"
+          />
+          <input class="input-text" placeholder="Contraseña" type="password" />
+
+          <a class="forget-link" href="">Olvidé mi contraseña</a>
+
+          <button type="button" class="btn orange" id="btn-ingresar">
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/modal-controller.js"></script>
   </body>
 </html>
